@@ -4,14 +4,14 @@
 
 `DPTestCase` comes without dependencies except `SenTestingKit` and has methods to let the test case execution wait for a certain interval or a condition to become true. Typical use case is waiting for an animation to finish.
 
-`DPBaseTestCase` inherits from `DPTestCase` and has methods to setup and tear down view controllers from Storyboard for testing, and provides a generator for a `NSArray` of `NSManagedObject`. Therefore it depends on an AppDelegate with a `UIWindow* window` property, the `DSMockDataGenerator` from [iOSReusableComponents](http://github.com/michaelkamphausen/iOSReusableComponents/MockDataGenerator) and the [OCMock](http://ocmock.org) and [OCHamcrest](http://hamcrest.org/OCHamcrest/) frameworks. It also imports the header files of all the mock categories, so that every subclass uses these categories.
+`DPBaseTestCase` inherits from `DPTestCase` and has methods to setup and tear down view controllers from Storyboard for testing, and provides a generator for a `NSArray` of `NSManagedObject`. Therefore it depends on an AppDelegate with a `UIWindow* window` property, the `DSMockDataGenerator` from [iOSReusableComponents](https://github.com/michaelkamphausen/iOSReusableComponents/tree/master/MockDataGenerator) and the [OCMock](http://ocmock.org) and [OCHamcrest](http://hamcrest.org/OCHamcrest/) frameworks. It also imports the header files of all the mock categories, so that every subclass uses these categories.
 You want to customize `DPBaseTestCase` for your needs, especially change the constants with the names of your storyboard and your momd file and rename the AppDelegate class name.
 
 Test cases should inherit from either `DPTestCase` or `DPBaseTestCase`.
 
 ## Mock Categories
 
-The [mockcategories](mockcategories) directory contains a set of categories for mocking singletons, inspired by the great article on [Mocking singletons with OCMock](http://twobitlabs.com/2011/02/mocking-singletons-with-ocmock/). There are categories for a few classes from Cocoa Touch, Facebook SDK, Urban Airship, UserVoice and RestKit.
+The [mockcategories][mockcategories] directory contains a set of categories for mocking singletons, inspired by the great article on [Mocking singletons with OCMock](http://twobitlabs.com/2011/02/mocking-singletons-with-ocmock/). There are categories for a few classes from Cocoa Touch, Facebook SDK, Urban Airship, UserVoice and RestKit.
 
 ### Mocking Shared Instances
 
@@ -48,4 +48,4 @@ As far as I know, class methods cannot be mocked with OCMock. Therefore, some mo
 
 ## License
 
-Licensed under the terms of the [MIT License](LICENSE).
+Licensed under the terms of the [MIT License](https://github.com/michaelkamphausen/OCAdditions/tree/master/LICENSE).
